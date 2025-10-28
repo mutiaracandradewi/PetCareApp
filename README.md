@@ -1,4 +1,45 @@
-# Welcome to your Expo app 👋
+# 🐾 PetCareApp: Mobile Grooming & Pet Care Booking
+
+[![Lisensi](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Status Aplikasi](https://img.shields.io/badge/Status-Development-yellowgreen)]()
+
+Aplikasi *mobile* sederhana yang dibangun menggunakan **Expo React Native**, dirancang untuk mempermudah pemilik hewan peliharaan dalam melakukan *booking* layanan *grooming*, penitipan, dan spa hewan langsung dari *smartphone*.
+
+# 📝 Deskripsi Program
+
+**PetCareApp** menyediakan antarmuka yang intuitif bagi pengguna untuk menjelajahi berbagai layanan perawatan hewan peliharaan yang ditawarkan. Fokus utama aplikasi adalah **kemudahan booking**, memungkinkan pengguna memilih layanan, mengisi detail hewan peliharaan mereka, dan menjadwalkan janji temu dengan cepat.
+
+## ✨ Fitur Utama
+
+- Formulir Booking: Pengguna dapat memilih layanan, mengisi data dasar hewan peliharaan (nama, jenis, dll.).
+- Penjadwalan: Fitur pemilihan tanggal dan waktu yang mudah untuk menentukan janji temu booking.
+- Antarmuka Mobile: Dirancang khusus untuk pengalaman terbaik di perangkat seluler (Android dan iOS).
+- Katalog Layanan: Menampilkan daftar lengkap layanan penitipan, grooming, dan spa hewan, lengkap dengan deskripsi dan harga.
+
+## 🛠 Teknologi yang Digunakan
+
+Proyek ini sepenuhnya dibangun menggunakan **React Native**, **Zustand** dan **Expo Router** untuk pengembangan aplikasi cross-platform.
+| Kategori | Teknologi/Framework | Keterangan |
+| :--- | :--- | :--- |
+| **Mobile Dev** | **React Native** | Framework untuk membangun aplikasi *native* dengan JavaScript. |
+| **Development Tool** | **Expo** | *Toolchain* yang mempermudah *development*, *build*, dan *testing* React Native. |
+| **Navigasi** | **React Navigation** | Digunakan untuk mengelola perpindahan antar layar (screen) dalam aplikasi. |
+| **State Management** | **Zustand** | Solusi manajemen *state* yang ringan dan cepat untuk mengelola data aplikasi. |
+| **Bahasa Pemrograman** | JavaScript (ES6+) | Bahasa utama yang digunakan dalam proyek. |
+
+## 🚀 Instalasi dan Menjalankan Program
+
+Untuk menjalankan aplikasi ini di lingkungan lokal Anda, pastikan Anda telah menginstal **Node.js** dan **Expo CLI** (`npm install -g expo-cli`).
+
+### 1. Clone Repositori
+Buka terminal dan *clone* repositori ini:
+
+```bash
+git clone [https://github.com/mutiaracandradewi/PetCareApp.git](https://github.com/mutiaracandradewi/PetCareApp.git)
+cd PetCareApp
+
+
+## Instal Dependensi
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -16,12 +57,16 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+Anda dapat menjalankan aplikasi di emulator, simulator, atau perangkat fisik Anda menggunakan Expo Go.
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+Setelah perintah dijalankan:
+Pengguna Android/iOS: Pindai kode QR yang muncul di terminal atau browser menggunakan aplikasi Expo Go di smartphone Anda.
+Pengguna Emulator/Simulator: Tekan a untuk emulator Android atau i untuk simulator iOS di terminal.
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
