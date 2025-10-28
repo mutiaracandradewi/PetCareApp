@@ -27,6 +27,43 @@ Proyek ini sepenuhnya dibangun menggunakan **React Native**, **Zustand** dan **E
 | **State Management** | **Zustand** | Solusi manajemen *state* yang ringan dan cepat untuk mengelola data aplikasi. |
 | **Bahasa Pemrograman** | JavaScript (ES6+) | Bahasa utama yang digunakan dalam proyek. |
 
+## 📸 Galeri Tampilan Aplikasi
+
+Berikut adalah beberapa tampilan utama dari PetCareApp:
+
+* **1. Layar Beranda:**
+    ![Layar Beranda Aplikasi](assets/screenshot/home booking list.jpg)
+    *Menampilkan navigasi utama.*
+
+* **2. Formulir Booking (Data Hewan):**
+    ![Form Booking](assets/screenshot/booking.jpg)
+
+* **Formulir Booking (pilihan service):**
+    ![Form Booking](assets/screenshot/booking1.jpg)
+    ![Form Booking](assets/screenshot/booking2.jpg)
+    ![Form Booking](assets/screenshot/booking3.jpg)
+     *Meminta informasi dasar hewan peliharaan.*
+
+  * **Konfirmasi Booking:**
+    ![Konfirmasi Booking](assets/screenshot/sukses booking.jpg)
+    *Ringkasan pesanan/finalisasi.*
+
+* **3. Booking List:**
+    ![Konfirmasi Booking](assets/screenshot/booking list.jpg)
+    ![Konfirmasi Booking](assets/screenshot/booking list2.jpg)
+    *Ringkasan pesanan/finalisasi.*
+
+* **4. Edit Booking:**
+    ![Form Booking Step 2](assets/screenshot/edit booking.jpg)
+    ![Form Booking Step 2](assets/screenshot/animasi edit booking.jpg)
+    *Pengguna mengedit booking.*
+
+* **5. Delete Booking:**
+    ![Form Booking Step 2](assets/screenshot/delete.jpg)
+    ![Form Booking Step 2](assets/screenshot/confirm delete.jpg)
+    *Pengguna menghapus booking.*
+
+
 ## 🚀 Instalasi dan Menjalankan Program
 
 Untuk menjalankan aplikasi ini di lingkungan lokal Anda, pastikan Anda telah menginstal **Node.js** dan **Expo CLI** (`npm install -g expo-cli`).
