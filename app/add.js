@@ -1,111 +1,145 @@
-import { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, Pressable, Platform, ScrollView } from 'react-native';
-import { useRouter } from 'expo-router';
 import { Picker } from '@react-native-picker/picker';
+import { useRouter } from 'expo-router';
+import { useState } from 'react';
+import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useBookingStore } from '../store/bookingStore';
 
-export default function AddScreen() {
+export default function AddBookingScreen() {
   const router = useRouter();
   const addBooking = useBookingStore((state) => state.addBooking);
 
-  const [petName, setPetName] = useState('');
-  const [petType, setPetType] = useState('Anjing');
-  const [serviceType, setServiceType] = useState('Grooming');
-  const [date, setDate] = useState('');
-  const [errors, setErrors] = useState({});
+  const [form, setForm] = useState({
+    customerName: '',
+    petName: '',
+    petType: '',
+    serviceType: '',
+    date: '',
+  });
 
-  const validate = () => {
-    const newErrors = {};
-    if (!petName.trim()) newErrors.petName = 'Pet name is required';
-    if (!date.trim()) newErrors.date = 'Date is required';
-    if (!petType.trim()) newErrors.petType = 'Pet type is required';
-    if (!serviceType.trim()) newErrors.serviceType = 'Service type is required';
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  const handleChange = (key, value) => {
+    setForm({ ...form, [key]: value });
   };
 
   const handleSubmit = () => {
-    if (!validate()) return;
-    addBooking({
-      id: Date.now().toString(),
-      petType,
-      petName,
-      serviceType,
-      date,
-      status: 'pending',
-      details: `${serviceType} for ${petType} on ${date}`,
-    });
-    if (Platform.OS === 'web') {
-      alert('Booking added successfully!');
-      router.back();
-    } else {
-      const Alert = require('react-native').Alert;
-      Alert.alert('Success', 'Booking added successfully!', [{ onPress: () => router.back() }]);
+    if (!form.customerName || !form.petName || !form.petType || !form.serviceType || !form.date) {
+      Alert.alert('Error', 'Please fill all fields!');
+      return;
     }
+
+    addBooking(form);
+    Alert.alert('Success', 'Booking added successfully!');
+    router.back(); // kembali ke Home
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.header}>Add Booking</Text>
-      <Text style={styles.label}>Pet Type</Text>
-      <Picker
-        selectedValue={petType}
-        style={styles.input}
-        onValueChange={setPetType}
-      >
-        <Picker.Item label="Anjing" value="Anjing" />
-        <Picker.Item label="Kucing" value="Kucing" />
-      </Picker>
-      {errors.petType && <Text style={styles.error}>{errors.petType}</Text>}
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.header}>Add New Booking</Text>
 
+      {/* Customer Name */}
+      <Text style={styles.label}>Customer Name</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Enter your name"
+        value={form.customerName}
+        onChangeText={(text) => handleChange('customerName', text)}
+      />
+
+      {/* Pet Name */}
       <Text style={styles.label}>Pet Name</Text>
       <TextInput
         style={styles.input}
         placeholder="Enter pet name"
-        value={petName}
-        onChangeText={setPetName}
+        value={form.petName}
+        onChangeText={(text) => handleChange('petName', text)}
       />
-      {errors.petName && <Text style={styles.error}>{errors.petName}</Text>}
 
+      {/* Pet Type Picker */}
+      <Text style={styles.label}>Pet Type</Text>
+      <View style={styles.pickerContainer}>
+        <Picker
+          selectedValue={form.petType}
+          onValueChange={(value) => handleChange('petType', value)}
+        >
+          <Picker.Item label="Select Pet Type" value="" />
+          <Picker.Item label="Dog" value="Dog" />
+          <Picker.Item label="Cat" value="Cat" />
+          <Picker.Item label="Rabbit" value="Rabbit" />
+          <Picker.Item label="Bird" value="Bird" />
+        </Picker>
+      </View>
+
+      {/* Service Type Picker */}
       <Text style={styles.label}>Service Type</Text>
-      <Picker
-        selectedValue={serviceType}
-        style={styles.input}
-        onValueChange={setServiceType}
-      >
-        <Picker.Item label="Grooming" value="Grooming" />
-        <Picker.Item label="Penitipan" value="Penitipan" />
-        <Picker.Item label="Check-up" value="Check-up" />
-      </Picker>
-      {errors.serviceType && <Text style={styles.error}>{errors.serviceType}</Text>}
+      <View style={styles.pickerContainer}>
+        <Picker
+          selectedValue={form.serviceType}
+          onValueChange={(value) => handleChange('serviceType', value)}
+        >
+          <Picker.Item label="Select Service Type" value="" />
+          <Picker.Item label="Grooming" value="Grooming" />
+          <Picker.Item label="Health Check" value="Health Check" />
+          <Picker.Item label="Vaccination" value="Vaccination" />
+          <Picker.Item label="Pet Sitting" value="Pet Sitting" />
+        </Picker>
+      </View>
 
+      {/* Date */}
       <Text style={styles.label}>Date</Text>
       <TextInput
         style={styles.input}
         placeholder="YYYY-MM-DD"
-        value={date}
-        onChangeText={setDate}
+        value={form.date}
+        onChangeText={(text) => handleChange('date', text)}
       />
-      {errors.date && <Text style={styles.error}>{errors.date}</Text>}
 
+      {/* Submit Button */}
       <Pressable style={styles.button} onPress={handleSubmit}>
-        <Text style={styles.buttonText}>Add Booking</Text>
+        <Text style={styles.buttonText}>Save Booking</Text>
       </Pressable>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, backgroundColor: '#fff' },
-  header: { fontSize: 22, fontWeight: 'bold', textAlign: 'center', marginBottom: 20 },
-  label: { fontWeight: 'bold', marginTop: 12, marginBottom: 4 },
+  container: {
+    padding: 20,
+    backgroundColor: '#fff',
+    flexGrow: 1,
+  },
+  header: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  label: {
+    fontWeight: 'bold',
+    marginBottom: 5,
+    color: '#333',
+  },
   input: {
-    borderWidth: 1, borderColor: '#ccc', borderRadius: 8,
-    padding: Platform.OS === 'ios' ? 12 : 8, marginBottom: 8,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    padding: 10,
+    marginBottom: 15,
+  },
+  pickerContainer: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    marginBottom: 15,
   },
   button: {
-    backgroundColor: '#2196F3', borderRadius: 8, padding: 12, alignItems: 'center', marginTop: 16
+    backgroundColor: '#007bff',
+    paddingVertical: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginTop: 10,
   },
-  buttonText: { color: '#fff', fontWeight: 'bold', fontSize: 16 },
-  error: { color: 'red', marginBottom: 8, marginTop: -4 },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
 });
