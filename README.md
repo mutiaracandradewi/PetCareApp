@@ -4,6 +4,7 @@
 [![Status Aplikasi](https://img.shields.io/badge/Status-Development-yellowgreen)]()
 
 Aplikasi *mobile* sederhana yang dibangun menggunakan **Expo React Native**, dirancang untuk mempermudah pemilik hewan peliharaan dalam melakukan *booking* layanan *grooming*, penitipan, dan spa hewan langsung dari *smartphone*.
+
 Link video Loom : https://www.loom.com/share/c8616b0f01fe48a9ba6bcfb3a66b28c5
 # 📝 Deskripsi Program
 
