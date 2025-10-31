@@ -32,7 +32,7 @@ Proyek ini sepenuhnya dibangun menggunakan **React Native**, **Zustand** dan **E
 Berikut adalah beberapa tampilan utama dari PetCareApp:
 
 * **1. Layar Beranda:**
-    ![Layar Beranda Aplikasi](assets/screenshot/home booking list.jpg)
+    ![Layar Beranda Aplikasi](assets/screenshot/homebookinglist.jpg)
     *Menampilkan navigasi utama.*
 
 * **2. Formulir Booking (Data Hewan):**
@@ -45,22 +45,22 @@ Berikut adalah beberapa tampilan utama dari PetCareApp:
      *Meminta informasi dasar hewan peliharaan.*
 
   * **Konfirmasi Booking:**
-    ![Konfirmasi Booking](assets/screenshot/sukses booking.jpg)
+    ![Konfirmasi Booking](assets/screenshot/suksesbooking.jpg)
     *Ringkasan pesanan/finalisasi.*
 
 * **3. Booking List:**
-    ![Konfirmasi Booking](assets/screenshot/booking list.jpg)
-    ![Konfirmasi Booking](assets/screenshot/booking list2.jpg)
+    ![Konfirmasi Booking](assets/screenshot/bookinglist.jpg)
+    ![Konfirmasi Booking](assets/screenshot/bookinglist2.jpg)
     *Ringkasan pesanan/finalisasi.*
 
 * **4. Edit Booking:**
-    ![Form Booking Step 2](assets/screenshot/edit booking.jpg)
-    ![Form Booking Step 2](assets/screenshot/animasi edit booking.jpg)
+    ![Form Booking Step 2](assets/screenshot/editbooking.jpg)
+    ![Form Booking Step 2](assets/screenshot/animasieditbooking.jpg)
     *Pengguna mengedit booking.*
 
 * **5. Delete Booking:**
     ![Form Booking Step 2](assets/screenshot/delete.jpg)
-    ![Form Booking Step 2](assets/screenshot/confirm delete.jpg)
+    ![Form Booking Step 2](assets/screenshot/confirmdelete.jpg)
     *Pengguna menghapus booking.*
 
 
