@@ -33,36 +33,30 @@ Proyek ini sepenuhnya dibangun menggunakan **React Native**, **Zustand** dan **E
 Berikut adalah beberapa tampilan utama dari PetCareApp:
 
 * **1. Layar Beranda:**
-    ![Layar Beranda Aplikasi](assets/screenshot/homebookinglist.jpg)
+    ![Layar Beranda Aplikasi](assets/screenshot/home.jpg)
     *Menampilkan navigasi utama.*
 
 * **2. Formulir Booking (Data Hewan):**
-    ![Form Booking](assets/screenshot/booking.jpg)
+    ![Form Booking](assets/screenshot/add.jpg)
 
-* **Formulir Booking (pilihan service):**
-    ![Form Booking](assets/screenshot/booking1.jpg)
-    ![Form Booking](assets/screenshot/booking2.jpg)
-    ![Form Booking](assets/screenshot/booking3.jpg)
-     *Meminta informasi dasar hewan peliharaan.*
+  * **Berhasil Booking:**
+    ![Berhasil Booking](assets/screenshot/suksesadd.jpg)
+    ![Booking List](assets/screenshot/suksesadd.jpg)
+    *Ringkasan pesanan.*
 
-  * **Konfirmasi Booking:**
-    ![Konfirmasi Booking](assets/screenshot/suksesbooking.jpg)
-    *Ringkasan pesanan/finalisasi.*
-
-* **3. Booking List:**
-    ![Konfirmasi Booking](assets/screenshot/bookinglist.jpg)
-    ![Konfirmasi Booking](assets/screenshot/bookinglist2.jpg)
-    *Ringkasan pesanan/finalisasi.*
-
-* **4. Edit Booking:**
-    ![Form Booking Step 2](assets/screenshot/editbooking.jpg)
-    ![Form Booking Step 2](assets/screenshot/animasieditbooking.jpg)
+* **3. Edit Booking:**
+    ![Edit Booking](assets/screenshot/edit.jpg)
+    ![Sukses Edit Booking](assets/screenshot/suksesupdate.jpg)
     *Pengguna mengedit booking.*
 
-* **5. Delete Booking:**
-    ![Form Booking Step 2](assets/screenshot/delete.jpg)
-    ![Form Booking Step 2](assets/screenshot/confirmdelete.jpg)
+* **4. Delete Booking:**
+    ![Delete Booking](assets/screenshot/popupdelete.jpg)
     *Pengguna menghapus booking.*
+
+  * **5. Booking List:**
+   ![Booking List](assets/screenshot/listbooking.jpg)
+  ![Booking List](assets/screenshot/homedanlistbooking.jpg)
+    *Ringkasan pesanan.*
 
 
 ## 🚀 Instalasi dan Menjalankan Program
