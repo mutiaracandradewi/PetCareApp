@@ -41,7 +41,6 @@ Berikut adalah beberapa tampilan utama dari PetCareApp:
 
   * **Berhasil Booking:**
     ![Berhasil Booking](assets/screenshot/suksesadd.jpg)
-    ![Booking List](assets/screenshot/suksesadd.jpg)
     *Ringkasan pesanan.*
 
 * **3. Edit Booking:**
